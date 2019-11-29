@@ -15,6 +15,8 @@ connectDB();
 const bootcamps = require('./routes/bootcamps');
 const app = express();
 // dev logging middleware
+// body parser
+app.use(express.json());
 
 app.use(morgan('dev'));
 
