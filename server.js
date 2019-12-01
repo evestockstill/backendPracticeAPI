@@ -10,16 +10,12 @@ const connectDB = require('./config/db');
 dotenv.config({ path: './config/.env' });
 connectDB();
 
-
-
 const bootcamps = require('./routes/bootcamps');
 const app = express();
 // dev logging middleware
 // body parser
 app.use(express.json());
-
 app.use(morgan('dev'));
-
 app.use('/api/v1/bootcamps', bootcamps);
 
 

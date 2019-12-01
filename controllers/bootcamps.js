@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+const express = require('express');
+
 const Bootcamp = require('../models/Bootcamp');
 // @desc Get all bootcamps
 // @route GET /api/v1/bootcamps
