@@ -1,9 +1,11 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 
 // require('dotenv').config();
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
+// eslint-disable-next-line no-unused-vars
 const colors = require('colors');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
