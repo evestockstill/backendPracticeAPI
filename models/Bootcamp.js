@@ -20,11 +20,7 @@ const BootcampSchema = new mongoose.Schema({
     },
     website: {
         type: String,
-        match: [
-            // eslint-disable-next-line no-useless-escape
-            /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,
-            'Please use a valid URL with HTTP ort HTTPS'
-        ]
+        
     },
     phone: {
         type: String,
@@ -114,7 +110,7 @@ BootcampSchema.pre('save', async function(next) {
     this.location = { 
         type: 'Point',
         coordinates: [loc[0].longitude, loc[0].latitude],
-        formattedAdress: loc[0].formattedAddress,
+        formattedAddress: loc[0].formattedAddress,
         street: loc[0].streetName,
         city: loc[0].city,
         state: loc[0].stateCode,

@@ -26,10 +26,10 @@ app.use(errorHandler);
 
 
 // eslint-disable-next-line no-undef
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 7890;
 
 const server = app.listen(
-    PORT, 
+    PORT,
     console.log(`server running on ${process.env.NODE_ENV} mode on ${PORT}`.yellow.bold)
 );
 process.on('unhandledRejection', (err, promise) => {
