@@ -18,7 +18,7 @@ const app = express();
 // dev logging middleware
 // body parser
 app.use(express.json());
-if (process.env.NODE_ENV === 'developement') {
+if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 app.use('/api/v1/bootcamps', bootcamps);
@@ -37,3 +37,4 @@ process.on('unhandledRejection', (err, promise) => {
     server.close(() => process.exit(1));
 });
 module.exports = app;
+
